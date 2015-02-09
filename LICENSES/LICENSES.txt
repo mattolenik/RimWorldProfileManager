@@ -1,0 +1,145 @@
+﻿===============================================================================
+= 1. Project Licenses                                                         =
+===============================================================================
+-------------------------------------------------------------------------------
+- 1.1 ProfileManager                                                          -
+-------------------------------------------------------------------------------
+ProfileManager is released under the GPL version 3. Please see
+  LICENSES/GPL-3.0.txt for more details.
+  
+Copyright (c) Jack Odom, All rights reserved.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-------------------------------------------------------------------------------
+- 1.2 RimWorldHook/RimWorldHookLoader/RimWorldHookTests                       -
+-------------------------------------------------------------------------------
+RimWorldHook/RimWorldHookLoader/RimWorldHookTests are all released under the
+  LGPL version 3. Please see LICENSES/LGPL-3.0.txt for more details.
+
+Copyright (c) Jack Odom, All rights reserved.
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3.0 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library.  If not, see <http://www.gnu.org/licenses/>.
+
+===============================================================================
+= 2. External Libraries:                                                      =
+===============================================================================
+-------------------------------------------------------------------------------
+- 2.1 EasyHook                                                                -
+-------------------------------------------------------------------------------
+EasyHook is licensed by the GNU LESSER GENERAL PUBLIC LICENSE Version 3
+See LGPL-3.0.txt for a copy of the license.
+
+Copyright (C) 2009 Christoph Husse & (C) 2013 EasyHook Development Team &
+  (C) 2014 Justin Stenning
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+
+Please visit http://www.codeplex.com/easyhook for more information
+about the project and latest updates.
+
+-------------------------------------------------------------------------------
+- 2.2 udis86                                                                  -
+-------------------------------------------------------------------------------
+EasyHook makes use of the udis86 library by Vivek please also show your
+ support for this great open source project https://github.com/vmt/udis86
+Copyright (c) 2002-2012, Vivek Thampi <vivek.mt@gmail.com>
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+	1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+	2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-------------------------------------------------------------------------------
+- 2.3 Visual Studio Image Library                                             -
+-------------------------------------------------------------------------------
+The Visual Studio Image Library is copyright Microsoft Corporation.
+
+Relevant sections of the license, which is available in full in the file
+"LICENSES/Visual Studio 2012 Image Library EULA.docx" or located at the
+following URL:
+http://download.microsoft.com/download/0/6/0/0607D8EA-9BB7-440B-A36A-A24EB8C9C67E/Visual%20Studio%202012%20Image%20Library%20EULA.docx
+Retrieved from http://www.microsoft.com/en-us/download/details.aspx?id=35825
+ on 2/8/15.
+
+Right to Use and Distribute. The code and text files listed below are
+  “Distributable Code.”
+  * Images. You may copy, distribute, and deploy the images in the Image
+     Library in programs that you develop with Visual Studio 2012.
+  * Third Party Distribution. You may permit distributors of your programs to
+     copy and distribute the Distributable Code as part of those programs.
+Distribution Requirements. For any Distributable Code you distribute, you must
+  * add significant primary functionality to it in your programs;
+  * require distributors and external end users to agree to terms that protect
+     it at least as much as this agreement; 
+  * display your valid copyright notice on your programs; and
+  * indemnify, defend, and hold harmless Microsoft from any claims, including
+     attorneys’ fees, related to the distribution or use of your programs.
+Distribution Restrictions. You may not
+  * alter any copyright, trademark or patent notice in the Distributable Code;
+  * use Microsoft’s trademarks in your programs’ names or in a way that
+     suggests your programs come from or are endorsed by Microsoft;
+  * distribute Distributable Code to run on a platform other than Microsoft
+     operating systems,  run-time technologies or application platforms;
+  * include Distributable Code in malicious, deceptive or unlawful programs; or
+  * modify or distribute the source code of any Distributable Code so that any
+     part of it becomes subject to an Excluded License. An Excluded License
+	 is one that requires, as a condition of use, modification or distribution,
+	 that
+    > the code be disclosed or distributed in source code form; or
+    > others have the right to modify it.
+	
+-------------------------------------------------------------------------------
+- 2.4 Newtonsoft                                                              -
+-------------------------------------------------------------------------------
+Newtonsoft is licensed under the MIT license.
+See LICENSES/Newtonsoft-MIT.txt for more details.
