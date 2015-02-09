@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22512.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProfileManager", "ProfileManager\ProfileManager.csproj", "{5D3F2D51-FE26-42BE-A282-79799E8B92E7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D5DE9517-FF7A-4297-BCB7-1A36499AE8BA} = {D5DE9517-FF7A-4297-BCB7-1A36499AE8BA}
+		{366E841A-7208-4F6A-B974-3611DF3B0F49} = {366E841A-7208-4F6A-B974-3611DF3B0F49}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RimWorldHook", "RimWorldHook\RimWorldHook.csproj", "{D5DE9517-FF7A-4297-BCB7-1A36499AE8BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RimWorldHookLoader", "RimWorldHookLoader\RimWorldHookLoader.csproj", "{366E841A-7208-4F6A-B974-3611DF3B0F49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RimWorldHookTests", "RimWorldHookTests\RimWorldHookTests.csproj", "{BD4B0262-D3E3-4184-A583-3CC0A542FC28}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LICENSES", "LICENSES", "{E2F70352-F6F5-4AE0-8012-00BFD77C15F6}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSES\GPL-3.0.txt = LICENSES\GPL-3.0.txt
+		LICENSES\LGPL-3.0.txt = LICENSES\LGPL-3.0.txt
+		LICENSES\LICENSES.txt = LICENSES\LICENSES.txt
+		LICENSES\Newtonsoft-MIT.txt = LICENSES\Newtonsoft-MIT.txt
+		LICENSES\Visual Studio 2012 Image Library EULA.docx = LICENSES\Visual Studio 2012 Image Library EULA.docx
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D3F2D51-FE26-42BE-A282-79799E8B92E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D3F2D51-FE26-42BE-A282-79799E8B92E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D3F2D51-FE26-42BE-A282-79799E8B92E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D3F2D51-FE26-42BE-A282-79799E8B92E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5DE9517-FF7A-4297-BCB7-1A36499AE8BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5DE9517-FF7A-4297-BCB7-1A36499AE8BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5DE9517-FF7A-4297-BCB7-1A36499AE8BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5DE9517-FF7A-4297-BCB7-1A36499AE8BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{366E841A-7208-4F6A-B974-3611DF3B0F49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{366E841A-7208-4F6A-B974-3611DF3B0F49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{366E841A-7208-4F6A-B974-3611DF3B0F49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{366E841A-7208-4F6A-B974-3611DF3B0F49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD4B0262-D3E3-4184-A583-3CC0A542FC28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD4B0262-D3E3-4184-A583-3CC0A542FC28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD4B0262-D3E3-4184-A583-3CC0A542FC28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD4B0262-D3E3-4184-A583-3CC0A542FC28}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
