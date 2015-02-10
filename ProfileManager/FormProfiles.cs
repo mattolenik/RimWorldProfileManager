@@ -71,8 +71,10 @@ namespace ProfileManager
                 dataGridView1.DataSource = ProfileManager.Profiles;
                 dataGridView1.AutoResizeColumns();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show("Failed to initialize Grid: " + ex.Message);
+                throw;
             }
         }
 

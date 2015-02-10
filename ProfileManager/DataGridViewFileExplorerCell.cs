@@ -13,17 +13,14 @@ namespace ProfileManager
 
     internal class DataGridViewFileExplorerCell : DataGridViewTextBoxCell
     {
-        private readonly DataGridViewFileExplorerColumn _column;
+        private DataGridViewFileExplorerColumn _column;
+        private DataGridViewFileExplorerColumn Column => _column ?? (_column = OwningColumn as DataGridViewFileExplorerColumn);
         private bool _focused;
         private PushButtonState _state = PushButtonState.Normal;
         private Rectangle? buttonBounds;
 
         public DataGridViewFileExplorerCell()
         {
-            _column = OwningColumn as DataGridViewFileExplorerColumn;
-            if (_column == null)
-                throw new Exception(
-                    "DataGridViewFileExplorerCell must be added as a CellTemplate to a DataGridViewFileExplorerColumn");
         }
 
         protected override void Paint(Graphics graphics, Rectangle clipBounds, Rectangle cellBounds, int rowIndex,
@@ -62,7 +59,7 @@ namespace ProfileManager
             {
                 if (e.RowIndex == -1) return;
                 _focused = true;
-                _column.ClearButtonStates();
+                Column.ClearButtonStates();
                 var data = ShowFileExplorer(DataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value as string);
                 if (data != null)
                 {
@@ -99,8 +96,8 @@ namespace ProfileManager
 
         private string ShowFileExplorer(string current)
         {
-            var result = _column.ShowDialog(current);
-            return result == DialogResult.OK ? _column.DialogResult : null;
+            var result = Column.ShowDialog(current);
+            return result == DialogResult.OK ? Column.DialogResult : null;
         }
 
         protected override void OnLeave(int rowIndex, bool throughMouseClick)
