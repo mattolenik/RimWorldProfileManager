@@ -32,6 +32,8 @@
             this.tsbAddProfile = new System.Windows.Forms.ToolStripButton();
             this.tsbRunProfile = new System.Windows.Forms.ToolStripButton();
             this.tsbAbout = new System.Windows.Forms.ToolStripButton();
+            this.tsbOpenRimWorld = new System.Windows.Forms.ToolStripButton();
+            this.tsbOpenProfile = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -42,7 +44,9 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbAddProfile,
             this.tsbRunProfile,
-            this.tsbAbout});
+            this.tsbAbout,
+            this.tsbOpenRimWorld,
+            this.tsbOpenProfile});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(824, 25);
@@ -79,6 +83,26 @@
             this.tsbAbout.Size = new System.Drawing.Size(23, 22);
             this.tsbAbout.Text = "About";
             // 
+            // tsbOpenRimWorld
+            // 
+            this.tsbOpenRimWorld.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbOpenRimWorld.Image = global::ProfileManager.Properties.Resources.Folder_6221;
+            this.tsbOpenRimWorld.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbOpenRimWorld.Name = "tsbOpenRimWorld";
+            this.tsbOpenRimWorld.Size = new System.Drawing.Size(23, 22);
+            this.tsbOpenRimWorld.Text = "Open RimWorld Directory";
+            this.tsbOpenRimWorld.Click += new System.EventHandler(this.tsbOpenRimWorld_Click);
+            // 
+            // tsbOpenProfile
+            // 
+            this.tsbOpenProfile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbOpenProfile.Image = global::ProfileManager.Properties.Resources.Folder_special_open__5844_16x;
+            this.tsbOpenProfile.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbOpenProfile.Name = "tsbOpenProfile";
+            this.tsbOpenProfile.Size = new System.Drawing.Size(23, 22);
+            this.tsbOpenProfile.Text = "Open Profile Directory";
+            this.tsbOpenProfile.Click += new System.EventHandler(this.tsbOpenProfile_Click);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -112,6 +136,8 @@
         private System.Windows.Forms.ToolStripButton tsbRunProfile;
         private System.Windows.Forms.ToolStripButton tsbAbout;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ToolStripButton tsbOpenRimWorld;
+        private System.Windows.Forms.ToolStripButton tsbOpenProfile;
     }
 }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using ProfileManager.Properties;
@@ -78,9 +79,23 @@ namespace ProfileManager
             }
         }
 
+        private bool FindSelectedRow(out int rowIndex)
+        {
+            rowIndex = -1;
+            var cell = dataGridView1.SelectedCells.OfType<DataGridViewCell>().FirstOrDefault();
+            if (cell == null) return false;
+            rowIndex = cell.RowIndex;
+            return true;
+        }
+
         private void tsbRun_Click(object sender, EventArgs e)
         {
-            var rowIndex = dataGridView1.SelectedCells.OfType<DataGridViewCell>().First().RowIndex;
+            int rowIndex;
+            if (!FindSelectedRow(out rowIndex))
+            {
+                MessageBox.Show("No cell selected.", Resources.Title);
+                return;
+            }
             var row = dataGridView1.Rows[rowIndex];
             var profileName = row.Cells["ProfileName"].Value as string;
             var rimworldDir = row.Cells["RimWorldDir"].Value as string;
@@ -104,13 +119,62 @@ namespace ProfileManager
             // Validate that we'll be able to create the profileDir when it will be needed.
             if (ProfileManager.CreateProfileDirFromName(profileDir) != profileDir)
             {
-                MessageBox.Show("Profile Direcotry contains invalid characters, please fix.", Resources.Title);
+                MessageBox.Show("Profile Directory contains invalid characters, please fix.", Resources.Title);
                 return;
             }
             var result = MessageBox.Show(string.Format("Execute profile '{0}'?", profileName),
                 Resources.Title, MessageBoxButtons.YesNo);
             if (result == DialogResult.No) return;
             ExecuteProfile(rimworldDir, rimworldExe, profileDir);
+        }
+
+        private static void OpenDirectory(string dir)
+        {
+            if (!Directory.Exists(dir))
+            {
+                var result = MessageBox.Show("Directory does not exist, create it? " + Environment.NewLine + dir, Resources.Title,
+                    MessageBoxButtons.YesNo);
+                if (result == DialogResult.No) return;
+                DirectoryHelper.CreateRecursive(dir);
+            }
+            Process.Start(dir);
+        }
+
+        private void tsbOpenRimWorld_Click(object sender, EventArgs e)
+        {
+            int rowIndex;
+            if (!FindSelectedRow(out rowIndex))
+            {
+                MessageBox.Show("No cell selected.", Resources.Title);
+                return;
+            }
+            var row = dataGridView1.Rows[rowIndex];
+            var rimworldDir = row.Cells["RimWorldDir"].Value as string;
+            if (string.IsNullOrEmpty(rimworldDir))
+            {
+                MessageBox.Show("RimWorld Directory is not set.", Resources.Title);
+                return;
+            }
+            OpenDirectory(rimworldDir);
+        }
+
+        private void tsbOpenProfile_Click(object sender, EventArgs e)
+        {
+            int rowIndex;
+            if (!FindSelectedRow(out rowIndex))
+            {
+                MessageBox.Show("No cell selected.", Resources.Title);
+                return;
+            }
+            var row = dataGridView1.Rows[rowIndex];
+            var profileDirName = row.Cells["ProfileDir"].Value as string;
+            if (string.IsNullOrEmpty(profileDirName))
+            {
+                MessageBox.Show("RimWorld Directory is not set.", Resources.Title);
+                return;
+            }
+            var profilePath = Path.Combine(KnownFolder.ProfilesDirectory, profileDirName);
+            OpenDirectory(profilePath);
         }
     }
 }

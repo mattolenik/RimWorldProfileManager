@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="DataGridViewFileExplorerCell.cs" />
     <Compile Include="DataGridViewFileExplorerColumn.cs" />
+    <Compile Include="DirectoryHelper.cs" />
     <Compile Include="FormProfiles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +96,8 @@
     </Content>
     <Content Include="Resources\AddMark_10580.png" />
     <Content Include="Resources\DynamicHelp_5659.png" />
+    <None Include="Resources\Folder%28special-open%29_5844_16x.png" />
+    <None Include="Resources\Folder_6221.png" />
     <None Include="Resources\startwithoutdebugging_6556.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
