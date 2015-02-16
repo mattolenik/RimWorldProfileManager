@@ -13,6 +13,7 @@ namespace ProfileManager
 
         static ProfileManager()
         {
+            CheckProfileFolder();
             var save = false;
             string version = null;
             try
@@ -41,6 +42,26 @@ namespace ProfileManager
             if (save) Save();
             Profiles.Constraints.Add(new UniqueConstraint(Profiles.Columns["ProfileName"]));
             Profiles.RowChanged += (o, args) => Save();
+        }
+
+        private static void CheckProfileFolder()
+        {
+            if (!Directory.Exists(KnownFolder.ProfilesDirectory))
+                CreateRecursive(KnownFolder.ProfilesDirectory);
+        }
+
+        private static void CreateRecursive(string directory)
+        {
+            var di = new DirectoryInfo(directory);
+            var parent = di.Parent;
+            if (parent != null)
+                CreateRecursive(parent.FullName);
+            if (di.Exists) return;
+            try
+            {
+                di.Create();
+            }
+            catch { }
         }
 
         public static DataTable Profiles { get; }
