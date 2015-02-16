@@ -23,6 +23,8 @@ namespace ProfileManager
                 version = json.Substring(0, index);
                 json = json.Substring(index + Environment.NewLine.Length);
                 Profiles = JsonConvert.DeserializeObject<DataTable>(json, new DataTableConverter());
+                // If we save with no data, the columns don't get saved. Logic.
+                if (Profiles.Columns.Count == 0) version = string.Empty;
             }
             catch (Exception ex)
             {
